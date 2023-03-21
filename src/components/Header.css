@@ -1,10 +1,15 @@
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 100;
 }
 
-.headerLogo{
+.headerLogo {
     object-fit: contain;
     margin-left: 20px;
     height: 100px;
@@ -14,9 +19,24 @@
     display: flex;
     flex: 1;
     align-items: center;
+    max-width: fit-content;
+    padding: 10px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 50px;
+    /* margin: 0 10px; */
 }
 
-.headerRight{
+.searchCenter input{
+    border: none;
+    /* width: 250px; */
+    outline-width: 0; 
+}
+
+.headerRight {
     display: flex;
     align-items: center;
+    margin-right: 20px;
+    justify-content: space-between;
+    width: 15vw;
 }
