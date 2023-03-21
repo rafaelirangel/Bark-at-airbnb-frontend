@@ -1,0 +1,22 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLogo{
+    object-fit: contain;
+    margin-left: 20px;
+    height: 100px;
+}
+
+.searchCenter {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.headerRight{
+    display: flex;
+    align-items: center;
+}
