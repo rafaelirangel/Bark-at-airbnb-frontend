@@ -1,0 +1,13 @@
+.burgermenu{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+    max-width: fit-content;
+    padding: 13px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 50px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+
+}
