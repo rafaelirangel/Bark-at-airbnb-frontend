@@ -1,35 +1,22 @@
 import './App.css';
 import Home from './pages/Home';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import NotFound from './pages/NotFound';
+import Layout from './components/Layout';
 import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function App() {
   return (
-    <div className="app">
-          <Header />
-          <Home />
-          <Footer />
- 
-  
-{/* Home  */}
-
-    {/* Header */}
-
-    {/* Banner */} 
-      {/* Search */}
-
-    {/* Cards */}
-
-    {/* Footer */}
-
-     
-    {/* SearchPage */}  
-       {/* ... */}
-
+    <div className='app'>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path='*' element={<NotFound />} />
+          <Route index path='/' element={<Home />} />
+        </Route>  
+      </Routes>
     </div>
   );
 }
 
 export default App;
+
