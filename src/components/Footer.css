@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    border-top: 1px solid lightgray;
+    padding: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footerLeft {
+    display: flex;
+    padding: 5px;
+    font-size: 14px;
+
+}
+
+.footerRight {
+    display: flex;
+    align-items: center;
+    width: 15vw;
+    margin-right: 80px;
+}
+
+.footerRight p{
+    padding: 0 3px;
+    font-weight: bold;
+}
