@@ -1,0 +1,55 @@
+.subHeader {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    margin-top: 10px;
+    border-top: 1px solid lightgray;
+}
+
+.linksImg {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+}
+
+.linksBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    opacity: 0.6;
+    border-bottom: 1px solid lightgray;
+}
+
+.linksBox:hover {
+    opacity: 1;
+    border-bottom: 1px solid black;
+    transition: all 0.3s;
+}
+
+.linksLabel {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+@media(max-width: 748px) {
+
+    .linksImg {
+        width: 1.2rem;
+        height: 1.2rem;
+        object-fit: contain;
+    }
+
+    .linksLabel {
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+
+    .subHeader {
+        padding: 15px 30px;
+
+    }
+}

@@ -1,0 +1,40 @@
+h2 {
+    color: darkgray;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.notFound {
+    background-image: url(/Users/rafaelirangel/Library/sandbox/portfolio/bark-at-airbnb/src/img/frame-with-dogs-vector-white-background_53876-127700.avif);
+    background-image: repeating-linear-gradient();
+}
+
+.pageNotFound {
+    font-size: 150px;
+    font-weight: 300;
+}
+
+
+.notFoundContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 83vh;
+}
+
+.notFoundBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in;
+}
+
+.notFoundBtn:hover {
+    transform: scale(1.06);
+    background-color: lightgray;
+}
