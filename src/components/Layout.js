@@ -2,29 +2,36 @@ import { Link, Outlet } from "react-router-dom";
 import logo from '../img/logo.png';
 import './Layout.css'
 import SearchIcon from '@mui/icons-material/Search';
-import { Avatar } from "@mui/material";
 import LanguageIcon from '@mui/icons-material/Language';
+import DropdownMenu from "./DopdownMenu";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+
 
 const Layout = () => {
     return (
         <div className="layout">
             <nav className="header">
-                <Link className="linkHeader" to="/">
+                <Link className="linkHeader" to="/airbnb">
                     <img className="headerLogo" src={logo} alt="Logo" />
                 </Link>
 
-                <div className="searchCenter">
-                    {/* <p className="fixedText">Any where in NYC </p>  */}
-                    {/* <p className="verticalLine"> | </p>
-                <p className="fixedText">Any week</p>
-                <p className="verticalLine"> | </p> */}
-                    <input type="text" placeholder="Where" />
+                <div className="searchBar">
+                    <p className="fixedText">Any where in NYC</p>  
+                    <p className="fixedText"> Any week</p>
+                    <input className="inputText" type="text" placeholder="Borough" />
                     <SearchIcon className="searchIcon" />
                 </div>
 
                 <div className="headerRight">
-                    <Avatar />
+                    <DropdownMenu />
                 </div>
+
+            <div className="responsiveHeader">
+                    <Link className="linkHeader" to="/">
+                        <ArrowBackIosIcon />
+                    </Link>
+            </div>
+            
             </nav>
 
             {/* Whatever goes bellow Outlet is the unique content of the pages */}

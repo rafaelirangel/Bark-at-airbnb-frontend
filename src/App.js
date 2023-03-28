@@ -6,7 +6,6 @@ import axios from 'axios';
 
 function App() {
 
-  // https://public.opendatasoft.com/api/records/1.0/search/?dataset=airbnb-listings&q=dog+friendly&facet=host_response_time&facet=host_response_rate&facet=host_verifications&facet=city&facet=country&facet=property_type&facet=room_type&facet=bed_type&facet=amenities&facet=availability_365&facet=cancellation_policy&facet=features&refine.country=United+States&refine.city=New+York
   const [listingsData, setListings] = useState([]);
   const [error, setError] = useState(null);
 
@@ -38,8 +37,8 @@ function App() {
           <Route path='*' element={<NotFound />} />
           <Route path='/showMore' element={<ShowMore />} />
           <Route path='/showAmenties' element={<ShowAmenties />} />
-          <Route path='/airbnbInfo' element={<AirbnbInfo />} />
-          <Route index path='/' element={<Home listingsData={listingsData} />} />
+          <Route path='/airbnb/:id' element={<AirbnbInfo />} />
+          <Route index path='/airbnb' element={<Home listingsData={listingsData} />} />
         </Route>
       </Routes>
 

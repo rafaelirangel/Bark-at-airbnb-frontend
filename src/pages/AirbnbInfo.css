@@ -10,39 +10,38 @@ h5 {
     margin-bottom: 15px;
 }
 
-.houseDescrip{
-border-top: 1px solid lightgray;
-margin-left: 30px;
+.houseDescrip {
+    border-top: 1px solid lightgray;
+    margin-left: 30px;
 }
 
-.houseDescrip h1{
+.houseDescrip h1 {
     font-size: 30px;
     font-weight: 500;
     margin: 20px 0;
 }
 
-.feedback{
-display: flex;
-justify-content: space-between;
-
+.feedback {
+    display: flex;
+    justify-content: space-between;
 }
 
-.info{
+.info {
     display: flex;
 }
 
-.iconInfo{
+.iconInfo {
     margin-bottom: 10px;
 }
 
-.feedback h2{
+.feedback h2 {
     font-size: 15px;
     color: black;
     font-weight: 400;
     margin: 0 10px;
 }
 
-.shareInfo{
+.shareInfo {
     display: flex;
 }
 
@@ -97,11 +96,11 @@ justify-content: space-between;
     padding-bottom: 15px;
 }
 
-.about h1{
+.about h1 {
     font-size: 17px;
     font-weight: normal;
     padding-bottom: 20px;
-    
+
 }
 
 .showMore {
@@ -119,8 +118,6 @@ justify-content: space-between;
     cursor: pointer;
 }
 
-
-
 .houseInfo h3 {
     font-size: 16px;
     font-weight: 300;
@@ -128,107 +125,71 @@ justify-content: space-between;
     margin-bottom: 17px;
 }
 
-.amenities{
+.amenities {
     padding: 15px 0;
     border-bottom: 1px solid lightgray;
 }
-.amenities h2{
+
+.amenities h2 {
     padding-top: 15px;
     padding-bottom: 10px;
     font-weight: 500;
     font-size: 25px;
-    color: black;    
+    color: black;
 }
 
-.amenities h4{
-        font-weight: 300;
-            padding: 15px 0;
-            margin-left: 10px;
+.amenities h4 {
+    font-weight: 300;
+    padding: 15px 0;
+    margin-left: 10px;
 }
 
-.showAmenties{
+.showAmenties {
     border-radius: 20px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 15px 0;
-
 }
 
-.showAmentiesBtn{
-        border: none;
-        outline: none;
-        background: none;
-        cursor: pointer;
-        padding: 15px 0;
-        font-size: 17px;
-        text-align: center;
-        font-weight: 500;
+
+.showAmentiesBtn {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 500;
 }
 
 .reviews {
     border-bottom: 1px solid lightgray;
 }
 
-.reviews h2{
+.reviews h2 {
     padding-top: 15px;
-        padding-bottom: 10px;
-        font-weight: 500;
-        margin-left: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    margin-left: 10px;
 }
 
 .dogParks {
     border-bottom: 1px solid lightgray;
 }
 
-
-
-/* Medium */
-@media only screen and (min-width: 481px) and (max-width: 748px) {
-    /* CSS rules for Medium screens */
-}
-
 @media(min-width: 749px) {
     .airbnbInfo {
         margin: 0 auto;
-
-            justify-content: center;
-            align-items: center;
+        justify-content: center;
+        align-items: center;
     }
 
-        .banner {
+    .banner {
         border-radius: 20px;
         overflow: hidden;
-        height: 350px;    
-        }
-
+        height: 350px;
+    }
 }
-/* Large */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    /* CSS rules for Large screens */
-}
-
-/* Tablet */
-@media only screen and (min-width: 1025px) and (max-width: 1200px) {
-    /* CSS rules for Tablet screens */
-}
-
-/* Laptop */
-@media only screen and (min-width: 1201px) and (max-width: 1440px) {
-    /* CSS rules for Laptop screens */
-}
-
-/* Laptop Large */
-@media only screen and (min-width: 1441px) {
-    /* CSS rules for Laptop Large screens */
-}
-
-/* Mobile S width 320  height 213
-Medium 375 / 250
-Large 425 / 283
-Tablet 768 / 368 
-laptop 1024 / 496 40px
-laptop L  1440/ 584 80px padding on the sides
-*/
-

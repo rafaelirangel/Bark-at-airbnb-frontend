@@ -13,14 +13,27 @@ import PetsIcon from '@mui/icons-material/Pets';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShowAmenties from './ShowAmenties';
+import { useState } from "react";
+import { useParams, useLocation } from 'react-router-dom';
 
+const AirbnbInfo = ({listingData}) => {
 
+    //state variable to  toggle the modal
+    const [openModal, setOpenModal] = useState(false)
 
-const AirbnbInfo = (props) => {
+    const {id} = useParams();
+    console.log(id)
+
     return (
         <div className='airbnbInfo'>
 
-            <div className='houseDescrip'>
+            <p>{id}</p>
+            {/* <p>{city}</p>
+            <p>{country}</p> */}
+  
+            
+            {/* <div className='houseDescrip'>
                 <h1>Breathtaking Views in Conway- Hidden gem!</h1>
 
                 <div className='feedback'>
@@ -128,13 +141,12 @@ const AirbnbInfo = (props) => {
                     </div>
 
                     <div className="showAmenties">
-                        <Link to="/showAmenties">
-                            <button className="showAmentiesBtn">
+                        <button className="showAmentiesBtn" onClick={() => { setOpenModal(true) }}>
                                 Show all amenties
                             </button>
-                        </Link>
-
+                        {openModal && <ShowAmenties closeModal={setOpenModal} />}
                     </div>
+                 
                 </div>
 
                 <div className='reviews'>
@@ -143,12 +155,11 @@ const AirbnbInfo = (props) => {
                         <h2> 5.0 · reviews</h2>
                     </div>
 
-                    <div className="showAmenties">
-                        <Link to="/showAmenties">
-                            <button className="showAmentiesBtn">
+                    <div className="showReviews">
+                     
+                            <button className="shoReviewsBtn">
                                 Show all reviews
                             </button>
-                        </Link>
 
                     </div>
                 </div>
@@ -163,7 +174,7 @@ const AirbnbInfo = (props) => {
                         address="Address"
                     />
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

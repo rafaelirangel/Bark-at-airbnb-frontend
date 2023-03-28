@@ -1,0 +1,39 @@
+.parkCard {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 0.1);
+    transition: transform 0.1s ease-in;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.06);
+}
+
+.parkCard img {
+    min-width: 300px;
+    min-height: 200px;
+    width: 100%;
+}
+
+.parkCardInfo {
+    margin-top: -5px;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1;
+}
+
+.parkCardInfo h2 {
+    font-size: 17px;
+}
+
+.parkCardInfo h3 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.iconInfo h3{
+    margin-left: 5px;
+}
