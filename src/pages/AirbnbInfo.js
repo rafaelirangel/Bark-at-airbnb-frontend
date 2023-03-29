@@ -22,7 +22,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 
-const AirbnbInfo = ({ listingData }) => {
+const AirbnbInfo = () => {
 
     const { id } = useParams();
     console.log(id)
@@ -32,7 +32,7 @@ const AirbnbInfo = ({ listingData }) => {
 
     // let houses = listingsData.map((item) => {
     //     return (
-    //         <Show
+    //         <ShowMore
     //             item={item}
     //             key={item.id}
     //         />
@@ -41,6 +41,7 @@ const AirbnbInfo = ({ listingData }) => {
 
     //state variable to  toggle the modal
     const [openModal, setOpenModal] = useState(false)
+    const [openShowMoreModal, setOpenShowMoreModal] = useState(false)
 
     return (
         <div className='airbnbInfo'>
@@ -51,16 +52,20 @@ const AirbnbInfo = ({ listingData }) => {
                 <div className='feedback'>
                     <div className='info'>
                         <div className='iconInfo'>
-                            <PetsIcon />
+                            <div className='paw'>
+                                <PetsIcon />
+                            </div>
                             <h2> {`${item.review_scores_rating} reviews ·`}</h2>
                         </div>
 
                         <div className='iconInfo'>
                             <ThumbUpAltIcon />
-                            <h2> Superhost ·</h2>
+                            <h2>Superhost · </h2>
                         </div>
                         <div className='iconInfo'>
-                            <h2>{item.street}</h2>
+                            <div className='address'>
+                                <h2>{item.street}</h2>
+                            </div>
                         </div>
                     </div>
 
@@ -115,11 +120,13 @@ const AirbnbInfo = ({ listingData }) => {
                     <h1>{`${item.summary}`}</h1>
                     ...
 
+                    {}
+
                     <div className="showMore">
-                        <button className="showMoreBtn" onClick={() => { setOpenModal(true) }}>
+                        <button className="showMoreBtn" onClick={() => {setOpenShowMoreModal(true) }}>
                             Show More
                         </button>
-                        {openModal && <ShowMore closeModal={setOpenModal} />}
+                        {openShowMoreModal && <ShowMore closeShowMoreModal={setOpenShowMoreModal} />}
 
                         <KeyboardArrowRightIcon />
                     </div>
@@ -163,20 +170,62 @@ const AirbnbInfo = ({ listingData }) => {
 
                 </div>
 
-                <div className='reviews'>
-                    <div className='iconInfo'>
-                        <PetsIcon />
-                        <h2> 5.0 · reviews</h2>
+                {/* <div className='reviews'>
+                    <div className='reviewsHeader'>
+                        <div className='paw'>
+                            <PetsIcon />
+                        </div>
+                        <h2> {`${item.review_scores_rating} reviews ·`}</h2>
+
+
+                        <h3>Cleanliness</h3>
+                        <h3>{`${item.review_scores_cleanliness}`}</h3>
+
+                        
+                        <h3> Accuracy</h3>
+                        <h3>{`${item.review_scores_accuracy}`}</h3>
+
+                        <h3> Communication</h3>
+
+                        <h3>{`${item.review_scores_communication}`}</h3>
+
+                        <h3> Location</h3>
+
+                        <h3>{`${item.review_scores_location}`}</h3>
+
+                        <h3> Check-in</h3>
+
+                        <h3>{`${item.review_scores_checkin}`}</h3>
+
+
+                        <h3>Value</h3>
+
+                        <h3>{`${item.review_scores_value}`}</h3>
+
+                    </div>
+                </div> */}
+
+                <div className='location'>
+
+                    {/* <div className='addresss'> */}
+                        <h1> Where you'll be</h1>
+                        <h2>{item.street}</h2>
+                    {/* </div> */}
+
+                    <div className='neighborhood'>
+                        <h3>{item.neighborhood_overview}</h3>
                     </div>
 
-                    <div className="showReviews">
-
-                        <button className="shoReviewsBtn">
-                            Show all reviews
-                        </button>
-
+                    <div className='gettingAround'>
+                        <h1>Getting Around</h1>
+                        <h3>{item.transit}</h3>
                     </div>
+
                 </div>
+
+                {/* Add Host Info */}
+
+                {item.Name}    
 
                 <div className='dogParks'>
                     <ParkCard

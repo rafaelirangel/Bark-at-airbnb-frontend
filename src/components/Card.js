@@ -3,11 +3,13 @@ import './Card.css'
 import PetsIcon from '@mui/icons-material/Pets';
 import { Link } from "react-router-dom";
 
+
 const Card = ({ item }) => {
 
   return (
 
     <div className='card'>
+
       <Link to={`/airbnb/${item._id}`}
         state={{ item: item }}
         style={{
@@ -20,6 +22,7 @@ const Card = ({ item }) => {
         <div className='cardInfo'>
           <div className='title' >
             <h2>{item.street}</h2>
+            {/* <h2>{item.neighbourhood}</h2> */}
             <div className='review'>
               <div className='paw'>
                 <PetsIcon />
