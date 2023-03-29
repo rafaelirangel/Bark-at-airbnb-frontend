@@ -27,7 +27,14 @@ function App() {
     })
     .catch(err => console.log(err))
   }
-
+  async function handleLogOut() {
+    this.setState({
+      email: '',
+      password: '',
+      isLoggedIn: false
+    })
+    localStorage.clear()
+  }
   return (
     <div className="app">
           <Header />
