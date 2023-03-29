@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import LanguageIcon from '@mui/icons-material/Language';
 import DropdownMenu from "./DopdownMenu";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-
+import Search from "./Search";
 
 const Layout = () => {
     return (
@@ -18,7 +18,8 @@ const Layout = () => {
                 <div className="searchBar">
                     <p className="fixedText">Any where in NYC</p>  
                     <p className="fixedText"> Any week</p>
-                    <input className="inputText" type="text" placeholder="Borough" />
+                    {/* <input className="inputText" type="text" placeholder="Borough" /> */}
+                    <Search />
                     <SearchIcon className="searchIcon" />
                 </div>
 

@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom'
 import ParkCard from '../components/ParkCard';
 import './AirbnbInfo.css'
+import ShowAmenties from '../components/ShowAmenties';
+import ShowMore from '../components/ShowMore';
+import { useState } from "react";
+import { useParams, useLocation } from 'react-router-dom';
+
+//Icons used on the page
 import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
 import DoorFrontIcon from '@mui/icons-material/DoorFront';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -13,41 +19,48 @@ import PetsIcon from '@mui/icons-material/Pets';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShowAmenties from './ShowAmenties';
-import { useState } from "react";
-import { useParams, useLocation } from 'react-router-dom';
 
-const AirbnbInfo = ({listingData}) => {
+
+
+const AirbnbInfo = ({ listingData }) => {
+
+    const { id } = useParams();
+    console.log(id)
+    const location = useLocation()
+    console.log(location)
+    const { item } = location.state
+
+    // let houses = listingsData.map((item) => {
+    //     return (
+    //         <Show
+    //             item={item}
+    //             key={item.id}
+    //         />
+    //     )
+    // })
 
     //state variable to  toggle the modal
     const [openModal, setOpenModal] = useState(false)
 
-    const {id} = useParams();
-    console.log(id)
-
     return (
         <div className='airbnbInfo'>
 
-            <p>{id}</p>
-            {/* <p>{city}</p>
-            <p>{country}</p> */}
-  
-            
-            {/* <div className='houseDescrip'>
-                <h1>Breathtaking Views in Conway- Hidden gem!</h1>
+            <div className='houseDescrip'>
+                <h1>{item.name}</h1>
 
                 <div className='feedback'>
                     <div className='info'>
                         <div className='iconInfo'>
                             <PetsIcon />
-                            <h2> 5.0 · reviews ·</h2>
+                            <h2> {`${item.review_scores_rating} reviews ·`}</h2>
                         </div>
+
                         <div className='iconInfo'>
                             <ThumbUpAltIcon />
                             <h2> Superhost ·</h2>
                         </div>
                         <div className='iconInfo'>
-                            <h2>Address</h2>
+                            <h2>{item.street}</h2>
                         </div>
                     </div>
 
@@ -67,14 +80,14 @@ const AirbnbInfo = ({listingData}) => {
             </div>
 
             <div className='banner'>
-                <img src="https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720"></img>
+                <img src={item.xl_picture_url} alt='' />
             </div>
 
             <div className='mainContent'>
 
                 <div className='houseInfo'>
-                    <h2>Entire Chalet hosted by Ramya</h2>
-                    <h3>10 guests · 4 bedrooms · 6 beds · 2.5 baths</h3>
+                    <h2>{`Entire Chalet hosted by ${item.host_name}`}</h2>
+                    <h3>{`${item.guests_included} guests · ${item.bedrooms} bedrooms · ${item.beds} beds · ${item.bathrooms} baths`}</h3>
                 </div>
 
                 <div className='instructions'>
@@ -82,7 +95,7 @@ const AirbnbInfo = ({listingData}) => {
                         <ImportantDevicesIcon />
                         <h4>Great for remote work</h4>
                     </div>
-                    <h5>Fast wifi at 540 Mbps, plus a dedicated workspace in a common area.</h5>
+                    <h5>Fast wifi, plus a dedicated workspace in a common area.</h5>
 
 
                     <div className='iconInfo'>
@@ -93,26 +106,27 @@ const AirbnbInfo = ({listingData}) => {
 
                     <div className='iconInfo'>
                         <CalendarMonthIcon />
-                        <h4>Free cancellation for 48 hours.</h4>
+                        <h4>{`Cancellation policy: ${item.cancellation_policy}`}</h4>
                     </div>
 
                 </div>
 
                 <div className='about'>
-                    <h1>Chalet in the Clouds!</h1>
-                    <p> Relax & Rejuvenate w/ panoramic views of White Mountains from any of the 4 decks of Kailaśa Chalet!  Perched on top of a mountain overlooking Mt Chocorua & Silver Lake w/ majestic views of Mt Washington Valley. So easy to get lost in the beauty of Kailaśa!</p><br />
+                    <h1>{`${item.summary}`}</h1>
                     ...
+
                     <div className="showMore">
-                        <Link to="/showMore">
-                            <button className="showMoreBtn">
-                                Show More
-                            </button>
-                        </Link>
+                        <button className="showMoreBtn" onClick={() => { setOpenModal(true) }}>
+                            Show More
+                        </button>
+                        {openModal && <ShowMore closeModal={setOpenModal} />}
+
                         <KeyboardArrowRightIcon />
                     </div>
 
                 </div>
 
+                {/* This */}
                 <div className='amenities'>
                     <h2> What this place offers</h2>
                     <div className='iconInfo'>
@@ -142,11 +156,11 @@ const AirbnbInfo = ({listingData}) => {
 
                     <div className="showAmenties">
                         <button className="showAmentiesBtn" onClick={() => { setOpenModal(true) }}>
-                                Show all amenties
-                            </button>
+                            Show all amenties
+                        </button>
                         {openModal && <ShowAmenties closeModal={setOpenModal} />}
                     </div>
-                 
+
                 </div>
 
                 <div className='reviews'>
@@ -156,10 +170,10 @@ const AirbnbInfo = ({listingData}) => {
                     </div>
 
                     <div className="showReviews">
-                     
-                            <button className="shoReviewsBtn">
-                                Show all reviews
-                            </button>
+
+                        <button className="shoReviewsBtn">
+                            Show all reviews
+                        </button>
 
                     </div>
                 </div>
@@ -174,7 +188,7 @@ const AirbnbInfo = ({listingData}) => {
                         address="Address"
                     />
                 </div>
-            </div> */}
+            </div>
         </div>
     )
 }

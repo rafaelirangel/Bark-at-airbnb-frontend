@@ -35,9 +35,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path='*' element={<NotFound />} />
-          <Route path='/showMore' element={<ShowMore />} />
-          <Route path='/showAmenties' element={<ShowAmenties />} />
-          <Route path='/airbnb/:id' element={<AirbnbInfo />} />
+          {/* <Route path='/showMore' element={<ShowMore />} />
+          <Route path='/showAmenties' element={<ShowAmenties />} /> */}
+          <Route path='/airbnb/:id' element={<AirbnbInfo listingsData={listingsData} />} />
           <Route index path='/airbnb' element={<Home listingsData={listingsData} />} />
         </Route>
       </Routes>

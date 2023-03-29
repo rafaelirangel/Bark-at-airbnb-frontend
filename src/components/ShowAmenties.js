@@ -1,5 +1,7 @@
 import React from "react";
 import './ShowAmenties.css'
+
+//Icons used on the page
 import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService';
@@ -22,9 +24,9 @@ import { Alarm } from "@icon-park/react";
 import { Oven } from "@icon-park/react";
 import PetsIcon from '@mui/icons-material/Pets';
 import KeyIcon from '@mui/icons-material/Key';
-import Layout from "../components/Layout";
 
-//Modal Content
+
+//Amenties Modal Content
 const ShowAmenties = ({ closeModal }) => {
     return (
         <div className="modalBackground" onClick={() => closeModal(false)} >
