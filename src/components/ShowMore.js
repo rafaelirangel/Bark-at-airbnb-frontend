@@ -2,9 +2,12 @@ import React from "react";
 import './ShowMore.css'
 import { useLocation } from 'react-router-dom';
 
+
+//Show More Info Modal
 const ShowMore = ({ closeShowMoreModal }) => {
     const location = useLocation()
     const { item } = location.state
+    console.log(item)
 
     return (
         <div className="modalBackground" onClick={() => closeShowMoreModal(false)} >
@@ -12,7 +15,6 @@ const ShowMore = ({ closeShowMoreModal }) => {
                 <div className="closeBtn">
                     < button onClick={() => closeShowMoreModal(false)}>X</button >
                 </div>
-
 
                 <div className="description">
                     <h1>About this space</h1>
@@ -49,7 +51,6 @@ const ShowMore = ({ closeShowMoreModal }) => {
         </div>
     )
 }
-
 
 export default ShowMore
 

@@ -20,24 +20,14 @@ import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-
-
 const AirbnbInfo = () => {
 
     const { id } = useParams();
-    console.log(id)
+    // console.log(id)
     const location = useLocation()
-    console.log(location)
+    // console.log(location)
     const { item } = location.state
-
-    // let houses = listingsData.map((item) => {
-    //     return (
-    //         <ShowMore
-    //             item={item}
-    //             key={item.id}
-    //         />
-    //     )
-    // })
+    console.log(item)
 
     //state variable to  toggle the modal
     const [openModal, setOpenModal] = useState(false)
@@ -55,12 +45,12 @@ const AirbnbInfo = () => {
                             <div className='paw'>
                                 <PetsIcon />
                             </div>
-                            <h2> {`${item.review_scores_rating} reviews ·`}</h2>
+                            <h2> {`${item.review_scores_rating} reviews `}</h2>
                         </div>
 
                         <div className='iconInfo'>
                             <ThumbUpAltIcon />
-                            <h2>Superhost · </h2>
+                            <h2>Superhost  </h2>
                         </div>
                         <div className='iconInfo'>
                             <div className='address'>
@@ -102,7 +92,6 @@ const AirbnbInfo = () => {
                     </div>
                     <h5>Fast wifi, plus a dedicated workspace in a common area.</h5>
 
-
                     <div className='iconInfo'>
                         <DoorFrontIcon />
                         <h4>Self check-in</h4>
@@ -120,20 +109,16 @@ const AirbnbInfo = () => {
                     <h1>{`${item.summary}`}</h1>
                     ...
 
-                    {}
-
                     <div className="showMore">
-                        <button className="showMoreBtn" onClick={() => {setOpenShowMoreModal(true) }}>
+                        <button className="showMoreBtn" onClick={() => { setOpenShowMoreModal(true) }}>
                             Show More
                         </button>
                         {openShowMoreModal && <ShowMore closeShowMoreModal={setOpenShowMoreModal} />}
-
                         <KeyboardArrowRightIcon />
                     </div>
 
                 </div>
 
-                {/* This */}
                 <div className='amenities'>
                     <h2> What this place offers</h2>
                     <div className='iconInfo'>
@@ -170,49 +155,14 @@ const AirbnbInfo = () => {
 
                 </div>
 
-                {/* <div className='reviews'>
-                    <div className='reviewsHeader'>
-                        <div className='paw'>
-                            <PetsIcon />
-                        </div>
-                        <h2> {`${item.review_scores_rating} reviews ·`}</h2>
-
-
-                        <h3>Cleanliness</h3>
-                        <h3>{`${item.review_scores_cleanliness}`}</h3>
-
-                        
-                        <h3> Accuracy</h3>
-                        <h3>{`${item.review_scores_accuracy}`}</h3>
-
-                        <h3> Communication</h3>
-
-                        <h3>{`${item.review_scores_communication}`}</h3>
-
-                        <h3> Location</h3>
-
-                        <h3>{`${item.review_scores_location}`}</h3>
-
-                        <h3> Check-in</h3>
-
-                        <h3>{`${item.review_scores_checkin}`}</h3>
-
-
-                        <h3>Value</h3>
-
-                        <h3>{`${item.review_scores_value}`}</h3>
-
-                    </div>
-                </div> */}
-
                 <div className='location'>
-
-                    {/* <div className='addresss'> */}
-                        <h1> Where you'll be</h1>
-                        <h2>{item.street}</h2>
-                    {/* </div> */}
+                    
+                    <h1> Where you'll be</h1>
+                    <h2>{item.street}</h2>
+                    
 
                     <div className='neighborhood'>
+                        <h1>Neighborhood</h1>
                         <h3>{item.neighborhood_overview}</h3>
                     </div>
 
@@ -225,9 +175,9 @@ const AirbnbInfo = () => {
 
                 {/* Add Host Info */}
 
-                {item.Name}    
+                {/* {item.dogParks} */}
 
-                <div className='dogParks'>
+                {/* <div className='dogParks'>
                     <ParkCard
                         src="https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720"
                         title="Park Name"
@@ -236,7 +186,7 @@ const AirbnbInfo = () => {
                         description="Description"
                         address="Address"
                     />
-                </div>
+                </div> */}
             </div>
         </div>
     )

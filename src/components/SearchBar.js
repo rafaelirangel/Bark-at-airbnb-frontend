@@ -2,102 +2,90 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import Card from './Card.js';
 import SearchIcon from '@mui/icons-material/Search';
-// import { Home } from '../pages/Home.js';
+import { useParams, useLocation } from 'react-router-dom';
 
 
-// const Search = ({ item }) => {
-//     const [searchInput, setSearchInput] = useState('');
+// const SearchBar = ({ setSearchResults, item }) => {
+  
 
-//     const handleSearchInput = (e) => {
-//         setSearchInput(e.target.value);
-//     };
-
-// //    const handleSearchBtn = () => {
-// //     item(searchInput)
-// //    }
-
-//     const handleSearchBtn = item.filter((item) =>
-//         item.neighbourhood.toLowerCase().includes(searchInput.toLowerCase())
-//     );
-
-//     return (
-//         <div className='search'>
-//             <input
-//                 type='text'
-//                 placeholder='Search by neighborhood'
-//                 value={searchInput}
-//                 onChange={handleSearchInput}
-//             />
-//             <button onClick={handleSearchBtn} type='submit'>
-//                 Search
-//             </button>
-//         </div>
-//     );
-// };
-
-// export default Search;
-
-// const Search = ({ item }) => {
-//     const [searchInput, setSearchInput] = useState('');
-
-//     const handleSearchInput = (e) => {
-//         setSearchInput(e.target.value);
-//     };
-
-//     const filteredListings = item?.filter((item) =>
-//         item.neighbourhood.toLowerCase().includes(searchInput.toLowerCase())
-//     );
-
-//     return (
-//         <div className='search'>
-//             <input
-//                 type='text'
-//                 placeholder='Search by neighborhood'
-//                 value={searchInput}
-//                 onChange={handleSearchInput}
-//             />
-//             <div className='cardContainer'>
-//                 {filteredListings?.map((item) => (
-//                     <Card key={item._id} item={item} />
-//                 ))}
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Search;
-
-
-
-// const SearchBar = ({ item, setSearchResults }) => {
-
-//     const handleSubmit = (e) => e.preventDefault()
-
-//     const handleSearchChange = (e) => {
-//         if (!e.target.value) return setSearchResults(item)
-
-//         const resArr = item.filter(data => data.neighbourhood.includes(e.target.value))
-//         setSearchResults(resArr)
- 
+//     const handleSubmit = (e) => {
+//         e.preventDefault()
 //     }
 
-//   return (
-//     <div>
-//         <form className='search' onSubmit={handleSubmit}>
+//     const handleSearchChange = (e) => {
+//         // const [searchResults, setSearchResults] = useState(listingsData);
 
-//         <input className='searchInput' 
-//         type='text' 
-//         id='search' 
-//         onChange={handleSearchChange} />
+//         if (!e.target.value){
+//             return setSearchResults(item);
+//         }
 
-//         <button className='searchBtn'>
-//             <SearchIcon />
-//         </button>
+//         const resultsArray = item.filter(data => data.street.includes(e.target.value))
+//         console.log(resultsArray)
 
-//         </form>
-      
-//     </div>
-//   )
+//         setSearchResults(resultsArray);
+//     }
+
+//     return (
+//         <div>
+//             <form className='search' onSubmit={handleSubmit}>
+
+//                 <input className='searchInput'
+//                 type='text'
+//                 id='search'
+//                 onChange={handleSearchChange}
+//                 />
+
+//                 <button className='searchBtn'>
+//                     <SearchIcon />
+//                 </button>
+//             </form>
+           
+//         </div>
+//     );
 // }
 
 // export default SearchBar
+
+
+
+const SearchBar = ({item}) => {
+    const [searchInput, setSearchInput] = useState('');
+
+    console.log(item)
+    // const { id } = useParams();
+    // console.log(id)
+    // const location = useLocation()
+    // console.log(location)
+    // const { item } = location.state
+
+    const handleSearchInput = (e) => {
+        setSearchInput(e.target.value);
+    };
+
+    const handleSearch = item?.filter((items) =>
+        items.street.toLowerCase().includes(searchInput.toLowerCase())
+    );
+
+
+    const handleSearchBtn = () => {
+        handleSearch(searchInput)
+    }
+
+    
+    return (
+        <div className='search'>
+            <input
+                className=''
+                type='text'
+                placeholder='Search by neighborhood'
+                value={searchInput}
+                onChange={handleSearchInput}
+            />
+            <button className='searchBtn' type='submit' onClick={handleSearchBtn}>
+                <SearchIcon className='searchIcon' />
+            </button>
+        </div>
+    );
+};
+
+export default SearchBar;

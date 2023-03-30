@@ -12,6 +12,7 @@ h2 {
     font-weight: 500;
     font-size: 23px;
     margin: 40px 0;
+    justify-content: left;
 }
 
 .content {
@@ -47,6 +48,13 @@ h2 {
     padding: 25px;
     overflow-y: scroll;
     margin: 50px 0;
+}
+
+.modalContainer h1,
+h2 {
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 0;
 }
 
 .closeBtn {

@@ -2,7 +2,7 @@ import React from 'react'
 import './Card.css'
 import PetsIcon from '@mui/icons-material/Pets';
 import { Link } from "react-router-dom";
-
+import Layout from './Layout';
 
 const Card = ({ item }) => {
 

@@ -1,13 +1,20 @@
 import { Link, Outlet } from "react-router-dom";
 import logo from '../img/logo.png';
 import './Layout.css'
-import SearchIcon from '@mui/icons-material/Search';
+import SearchBar from "./SearchBar";
+import { useState } from "react";
+import { useParams, useLocation } from 'react-router-dom';
+
+//Icons used on the page
 import LanguageIcon from '@mui/icons-material/Language';
 import DropdownMenu from "./DopdownMenu";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-// import Search from "./SearchBar.js";
+import IosShareIcon from '@mui/icons-material/IosShare';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
+//Component contains header and footer
 const Layout = () => {
+
     return (
         <div className="layout">
             <nav className="header">
@@ -16,24 +23,29 @@ const Layout = () => {
                 </Link>
 
                 <div className="searchBar">
-                    <p className="fixedText">Any where in NYC</p>  
+                    <p className="fixedText">Any where in NYC</p>
                     <p className="fixedText"> Any week</p>
-                    {/* <input className="inputText" type="text" placeholder="Borough" /> */}
-                    {/* <Search /> */}
-                    {/* <SearchIcon className="searchIcon" /> */}
+                    <SearchBar />
                 </div>
 
                 <div className="headerRight">
                     <DropdownMenu />
                 </div>
+            </nav>
 
             <div className="responsiveHeader">
-                    <Link className="linkHeader" to="/">
-                        <ArrowBackIosIcon />
+                <nav className="resHeader">
+                    <Link className="linkHeader" to="/airbnb">
+                        <ArrowBackIosIcon className="arrowLogo" />
                     </Link>
+
+                    <div className="saveShare">
+                        <IosShareIcon />
+                        <FavoriteIcon />
+                    </div>
+
+                </nav>
             </div>
-            
-            </nav>
 
             {/* Whatever goes bellow Outlet is the unique content of the pages */}
             <Outlet />

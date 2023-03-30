@@ -30,7 +30,7 @@ import KeyIcon from '@mui/icons-material/Key';
 const ShowAmenties = ({ closeModal }) => {
     return (
         <div className="modalBackground" onClick={() => closeModal(false)} >
-            
+
             <div className="modalContainer">
                 <div className="closeBtn">
                     < button onClick={() => closeModal(false)}>X</button >
