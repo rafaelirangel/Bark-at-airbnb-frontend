@@ -1,9 +1,10 @@
 import React from "react";
 import './ShowMore.css'
-import { useLocation } from 'react-router-dom';
+import { useLocation, Route, Routes } from 'react-router-dom';
+import { AirbnbInfo } from "../pages";
 
 
-//Show More Info Modal
+//SHOW MORE INFO ABOUT THE PAGE.  (Modal)
 const ShowMore = ({ closeShowMoreModal }) => {
     const location = useLocation()
     const { item } = location.state

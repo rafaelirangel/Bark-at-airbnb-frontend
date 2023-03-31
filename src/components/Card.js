@@ -2,12 +2,11 @@ import React from 'react'
 import './Card.css'
 import PetsIcon from '@mui/icons-material/Pets';
 import { Link } from "react-router-dom";
-import Layout from './Layout';
 
+//PASSING PROPS TO RENDER ALL THE DATA IN THE CARD COMPONENT 
 const Card = ({ item }) => {
 
   return (
-
     <div className='card'>
 
       <Link to={`/airbnb/${item._id}`}
@@ -22,7 +21,6 @@ const Card = ({ item }) => {
         <div className='cardInfo'>
           <div className='title' >
             <h2>{item.street}</h2>
-            {/* <h2>{item.neighbourhood}</h2> */}
             <div className='review'>
               <div className='paw'>
                 <PetsIcon />

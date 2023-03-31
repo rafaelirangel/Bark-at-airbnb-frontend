@@ -1,23 +1,37 @@
 import React from 'react';
 import './ParkCard.css'
-import PetsIcon from '@mui/icons-material/Pets';
+import { Dog, Tree } from '@icon-park/react';
 
-//Using props to get the card for the home page
-const ParkCard = ({ src, title, reviews, description, address }) => {
+//DOG PARK 
+const ParkCard = ({ name, neighborhood, dogRunsType, accessible, notes, address }) => {
+
     return (
         <div className='parkCard'>
-            <img src={src} alt='' />
             <div className='parkCardInfo'>
-                <h2>{title}</h2>
+                <h4 className='dogIcon'> <Dog theme="two-tone" size="60" fill={['#333', '#FF5A5F']} /> </h4>
+                <h4> <Tree theme="filled" size="60" fill="#5aa00a" /> </h4>
+            </div>
 
-                <div className='iconInfo'>
-                    <PetsIcon />
-                    <h3 >{reviews}</h3>
-                </div>
-              
-                <h3>{description}</h3>
+            <div className='parkName'>
+                <h1>{name}</h1>
+            </div>
+
+            <div className='parkNeighborhood'>
+                <h3>{neighborhood}</h3>
+            </div>
+
+            <div className='parkAddress'>
                 <h3>{address}</h3>
             </div>
+
+            <div className='dogRunsType'>
+                <h3>Park Type: <br /> <span className='runType'>{`${dogRunsType}`}</span></h3>
+            </div>
+
+            <div className='parkNotes'>
+                <h3><span className='note'>Note: </span> <br />{notes}</h3>
+            </div>
+
         </div>
     )
 }

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import ParkCard from '../components/ParkCard';
 import './AirbnbInfo.css'
 import ShowAmenties from '../components/ShowAmenties';
@@ -23,11 +22,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 const AirbnbInfo = () => {
 
     const { id } = useParams();
-    // console.log(id)
     const location = useLocation()
-    // console.log(location)
     const { item } = location.state
-    console.log(item)
 
     //state variable to  toggle the modal
     const [openModal, setOpenModal] = useState(false)
@@ -36,6 +32,7 @@ const AirbnbInfo = () => {
     return (
         <div className='airbnbInfo'>
 
+            {/* BANNER INFO */}
             <div className='houseDescrip'>
                 <h1>{item.name}</h1>
 
@@ -80,6 +77,7 @@ const AirbnbInfo = () => {
 
             <div className='mainContent'>
 
+                {/* HOUSE INFO */}
                 <div className='houseInfo'>
                     <h2>{`Entire Chalet hosted by ${item.host_name}`}</h2>
                     <h3>{`${item.guests_included} guests · ${item.bedrooms} bedrooms · ${item.beds} beds · ${item.bathrooms} baths`}</h3>
@@ -108,7 +106,6 @@ const AirbnbInfo = () => {
                 <div className='about'>
                     <h1>{`${item.summary}`}</h1>
                     ...
-
                     <div className="showMore">
                         <button className="showMoreBtn" onClick={() => { setOpenShowMoreModal(true) }}>
                             Show More
@@ -116,7 +113,6 @@ const AirbnbInfo = () => {
                         {openShowMoreModal && <ShowMore closeShowMoreModal={setOpenShowMoreModal} />}
                         <KeyboardArrowRightIcon />
                     </div>
-
                 </div>
 
                 <div className='amenities'>
@@ -156,10 +152,10 @@ const AirbnbInfo = () => {
                 </div>
 
                 <div className='location'>
-                    
+
                     <h1> Where you'll be</h1>
                     <h2>{item.street}</h2>
-                    
+
 
                     <div className='neighborhood'>
                         <h1>Neighborhood</h1>
@@ -173,20 +169,55 @@ const AirbnbInfo = () => {
 
                 </div>
 
-                {/* Add Host Info */}
+                {/* HOST INFO */}
+                <div className='host'>
 
-                {/* {item.dogParks} */}
+                    <div className='hostInfo'>
 
-                {/* <div className='dogParks'>
-                    <ParkCard
-                        src="https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720"
-                        title="Park Name"
-                        reviews="Reviews"
-                        // <DogIcon />
-                        description="Description"
-                        address="Address"
-                    />
-                </div> */}
+                        <div className='hostImg'>
+                            <img src={item.host_thumbnail_url} alt='hostImg' />
+                        </div>
+
+
+                        <div className='hostName'>
+                            <h1>{`Hosted by ${item.host_name}`}</h1>
+                            <h3>{`Joined in ${item.host_since}`}</h3>
+                        </div>
+                    </div>
+
+                    <div className='hostInfoContent'>
+                        <div className='aboutHost'>
+                            <h3>{item.host_about}</h3>
+                        </div>
+
+                        <div className='hostResponse'>
+                            <h1>Response rate: <span className='hostRes'>{item.host_response_rate}</span></h1>
+                            <h1>Responde time: <span className='hostRes'>{item.host_response_time}</span></h1>
+                        </div>
+
+                        <div>
+                        </div>
+                        <div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                {/* DOG PARKS INFO */}
+                <div className='dogParks'>
+                    {item.dogParks.map((park, id) => (
+                        <ParkCard
+                            key={id}
+                            name={park.Name}
+                            neighborhood={park.neighborhood}
+                            address={park.Address}
+                            dogRunsType={park.DogRuns_Type}
+                            accessible={park.Accessible}
+                            notes={park.Notes}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )

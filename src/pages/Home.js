@@ -3,6 +3,7 @@ import './Home.css';
 import Card from "../components/Card";
 import SubHeader from "../components/SubHeader";
 
+//MAPPING THROUGH THE WHOLE DATA OBJECT AND PASSING IT THROUGH THE CARD COMPONENT AS A PROPS.
 const Home = ({ listingsData }) => {
 
     let houses = listingsData.map((item) => {

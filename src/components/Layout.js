@@ -13,7 +13,12 @@ import IosShareIcon from '@mui/icons-material/IosShare';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 //Component contains header and footer
-const Layout = () => {
+const Layout = ({}) => {
+
+    // const location = useLocation()
+    // // console.log(location)
+    // const { item } = location.state
+    // console.log(item)
 
     return (
         <div className="layout">

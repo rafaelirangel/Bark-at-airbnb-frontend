@@ -26,19 +26,21 @@ h5 {
     justify-content: space-between;
 }
 
+.feedback h2 {
+    font-size: 15px;
+    color: black;
+    font-weight: 400;
+    margin: 0 10px;
+}
+
 .info {
     display: flex;
 }
 
 .iconInfo {
     margin-bottom: 10px;
-}
-
-.feedback h2 {
-    font-size: 15px;
-    color: black;
-    font-weight: 400;
-    margin: 0 10px;
+    display: flex;
+    align-items: center;
 }
 
 .shareInfo {
@@ -92,11 +94,6 @@ h5 {
 
 }
 
-.iconInfo {
-    display: flex;
-    align-items: center;
-}
-
 .about {
     border-bottom: 1px solid lightgray;
     padding-top: 25px;
@@ -123,13 +120,6 @@ h5 {
     font-size: 17px;
     margin: 15px 0;
     cursor: pointer;
-}
-
-.houseInfo h3 {
-    font-size: 16px;
-    font-weight: 300;
-    margin-top: 5px;
-    margin-bottom: 17px;
 }
 
 .amenities {
@@ -173,7 +163,6 @@ h5 {
     font-weight: 500;
 }
 
-
 .location {
     padding: 20px 0;
     border-bottom: 1px solid lightgray;
@@ -181,7 +170,8 @@ h5 {
 }
 
 
-.location h1 {
+.location h1,
+.hostName h1 {
     font-weight: 500;
     font-size: 25px;
 }
@@ -206,14 +196,64 @@ h5 {
 }
 
 .gettingAround,
-.neighborhood {
+.neighborhood,
+.aboutHost {
     font-size: 14px;
     margin-bottom: 30px;
     line-height: 1.4;
+    text-align: justify;
+}
+
+.host {
+    border-bottom: 1px solid lightgray;
+
+}
+
+.hostInfo {
+    display: flex;
+}
+
+.hostImg {
+    margin-right: 15px;
+}
+
+.hostImg img {
+    border-radius: 40px;
+}
+
+.hostName h1 {
+    margin-bottom: 0;
+}
+
+.hostName h3 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 18px;
+}
+
+.hostResponse h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.hostResponse {
+    margin-bottom: 30px;
+}
+
+.aboutHost h3 {
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+.hostRes {
+    font-weight: normal;
 }
 
 .dogParks {
     border-bottom: 1px solid lightgray;
+    display: flex;
+    overflow-x: scroll;
+    margin: 15px 0;
 }
 
 @media(min-width: 749px) {
