@@ -13,12 +13,8 @@ import IosShareIcon from '@mui/icons-material/IosShare';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 //Component contains header and footer
-const Layout = ({}) => {
-
-    // const location = useLocation()
-    // // console.log(location)
-    // const { item } = location.state
-    // console.log(item)
+const Layout = ({ listingsData, setSearchResult }) => {
+    console.log(listingsData)
 
     return (
         <div className="layout">
@@ -30,7 +26,7 @@ const Layout = ({}) => {
                 <div className="searchBar">
                     <p className="fixedText">Any where in NYC</p>
                     <p className="fixedText"> Any week</p>
-                    <SearchBar />
+                    <SearchBar listingsData={listingsData} setSearchResult={setSearchResult} />
                 </div>
 
                 <div className="headerRight">

@@ -28,7 +28,13 @@
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
 }
 
-.inputText {
+.search {
+    display: flex;
+    align-items: center;
+}
+
+
+.searchInput {
     font-size: 15px;
     padding-left: 10px;
 }
@@ -55,7 +61,6 @@
     border-radius: 40px;
     padding: 10px;
     color: white;
-
 }
 
 .searchBtn {
@@ -63,8 +68,6 @@
     background-color: transparent;
     text-decoration: none;
 }
-
-.seacrh input {}
 
 .headerRight {
     display: flex;
