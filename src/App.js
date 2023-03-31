@@ -37,6 +37,22 @@ function App() {
     password: '',
     isLoggedIn: false  
   })
+  async function handleRegister(e) {
+    e.preventDefault()
+    if(user.password === user.retypePassword){
+      await axios.post("http://localhost:3001/users/register", {
+        email: user.email,
+        password: user.password
+      })
+      .then( res => {
+        localStorage.token = res.data.token
+        setUser({ isLoggedIn: true })
+      })
+      .catch(error => console.log(error))
+    } else {
+      console.log("user not found")
+    }
+  }
   async function handleLogIn(e) {
     e.preventDefault()
     axios.post('http://localhost:3001/users/login', {
