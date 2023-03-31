@@ -1,5 +1,15 @@
+.noMatching{
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #FF5A5F;
+}
 
-.cards h3{
+/* .noContent{
+    padding: 0 50%;
+} */
+
+.cards h3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
@@ -8,20 +18,19 @@
 
 @media(min-width: 320px) and (max-width: 580px) {
     .cards h3 {
-            grid-template-columns: repeat(1, 1fr);
-            margin: 0 40px;
-        }
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 40px;
+    }
 }
 
 @media (min-width: 580px) and (max-width: 768px) {
-    .cards h3 {   
+    .cards h3 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 768px) and (max-width: 992px){
+@media (min-width: 768px) and (max-width: 992px) {
     .cards h3 {
-            grid-template-columns: repeat(3, 1fr);
-        }
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
-

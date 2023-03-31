@@ -1,39 +1,72 @@
 .parkCard {
     margin: 10px;
+    padding: 20px 30px;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 10px 20px rgb(0 0 0 / 0.1);
-    transition: transform 0.1s ease-in;
     cursor: pointer;
 }
 
-.card:hover {
-    transform: scale(1.06);
-}
-
-.parkCard img {
-    min-width: 300px;
-    min-height: 200px;
-    width: 100%;
-}
-
 .parkCardInfo {
-    margin-top: -5px;
-    border-radius: 10px;
-    padding: 20px;
-    border: 1;
+    min-width: 268.75px;
+    max-height: 179.25px;
+    padding: 10px;
 }
 
-.parkCardInfo h2 {
-    font-size: 17px;
+.dogIcon {
+    margin-right: 15px;
 }
 
-.parkCardInfo h3 {
-    font-size: 14px;
-    font-weight: 400;
+.parkName h1 {
+    font-size: 18px;
+    font-weight: 700;
     margin: 5px 0;
 }
 
-.iconInfo h3{
-    margin-left: 5px;
+.parkNeighborhood h3 {
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    padding: 2px 0;
+}
+
+.parkAddress h3 {
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.dogRunsType h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.runType {
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.parkCardInfo,
+.parkName,
+.parkAddress,
+.dogRunsType,
+.parkNotes,
+.parkNeighborhood {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.parkNotes h3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.note {
+    font-size: 17px;
+    font-weight: 700;
+
 }

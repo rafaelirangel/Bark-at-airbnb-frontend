@@ -26,14 +26,6 @@ h5 {
     justify-content: space-between;
 }
 
-.info {
-    display: flex;
-}
-
-.iconInfo {
-    margin-bottom: 10px;
-}
-
 .feedback h2 {
     font-size: 15px;
     color: black;
@@ -41,14 +33,31 @@ h5 {
     margin: 0 10px;
 }
 
+.info {
+    display: flex;
+}
+
+.iconInfo {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
 .shareInfo {
     display: flex;
 }
 
+.banner {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 10px;
+    height: 35vh;
+}
+
 .banner img {
-    min-width: 300px;
-    min-height: 200px;
-    width: 100%;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .mainContent {
@@ -85,11 +94,6 @@ h5 {
 
 }
 
-.iconInfo {
-    display: flex;
-    align-items: center;
-}
-
 .about {
     border-bottom: 1px solid lightgray;
     padding-top: 25px;
@@ -97,10 +101,10 @@ h5 {
 }
 
 .about h1 {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: normal;
     padding-bottom: 20px;
-
+    line-height: 1.5;
 }
 
 .showMore {
@@ -116,13 +120,6 @@ h5 {
     font-size: 17px;
     margin: 15px 0;
     cursor: pointer;
-}
-
-.houseInfo h3 {
-    font-size: 16px;
-    font-weight: 300;
-    margin-top: 5px;
-    margin-bottom: 17px;
 }
 
 .amenities {
@@ -151,6 +148,7 @@ h5 {
     justify-content: center;
     align-items: center;
     margin: 15px 0;
+    text-align: center;
 }
 
 
@@ -165,19 +163,97 @@ h5 {
     font-weight: 500;
 }
 
-.reviews {
+.location {
+    padding: 20px 0;
     border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
 }
 
-.reviews h2 {
-    padding-top: 15px;
-    padding-bottom: 10px;
+
+.location h1,
+.hostName h1 {
     font-weight: 500;
-    margin-left: 10px;
+    font-size: 25px;
+}
+
+.address h2 {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.location h2 {
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 16px;
+    color: black;
+    margin-top: 5px;
+}
+
+.location h3 {
+    padding: 0;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.gettingAround,
+.neighborhood,
+.aboutHost {
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.host {
+    border-bottom: 1px solid lightgray;
+
+}
+
+.hostInfo {
+    display: flex;
+}
+
+.hostImg {
+    margin-right: 15px;
+}
+
+.hostImg img {
+    border-radius: 40px;
+}
+
+.hostName h1 {
+    margin-bottom: 0;
+}
+
+.hostName h3 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 18px;
+}
+
+.hostResponse h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.hostResponse {
+    margin-bottom: 30px;
+}
+
+.aboutHost h3 {
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+.hostRes {
+    font-weight: normal;
 }
 
 .dogParks {
     border-bottom: 1px solid lightgray;
+    display: flex;
+    overflow-x: scroll;
+    margin: 15px 0;
 }
 
 @media(min-width: 749px) {
@@ -191,5 +267,18 @@ h5 {
         border-radius: 20px;
         overflow: hidden;
         height: 350px;
+    }
+
+}
+
+@media(max-width: 749px) {
+
+    .info h2,
+    h1 {
+        font-size: 14px;
+    }
+
+    .shareInfo {
+        display: none;
     }
 }
