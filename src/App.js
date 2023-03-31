@@ -1,8 +1,4 @@
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import LogIn from './components/LogIn/LogIn';
-import LogOut from './components/LogOut/LogOut';
 import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import {Home, NotFound, Layout, ShowMore, AirbnbInfo, ShowAmenties } from './pages';
