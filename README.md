@@ -1,17 +1,30 @@
 ## About
+Bark @Airbnb is an extension of airbnb that allows dog-owners to search in a UI-friendly server-side application which is responsive on both mobile and desktop. This  application allows a user to search amongst a database of dog friendly NYC airbnb's, and view dog parks in the same borough. 
 
-## 
+**Our team goal for this project was to create:** 
 
-## Installation Front-end
+* A functional and self-sufficient end-to-end application that combines two open-API's using Mongoose aggregator methods linking the API's by a common thread- their geography. 
+
+Highlight: Filtering out all airbnb listings without images (in the seed part of the process), so that the site only displays airbnb's with images.
+
+* Accomplish a handsome aesthetic using a dependency called material-ui-icons, a well-known UI accessory to enhance the optics on the front-end.
+
+Highlight: Developing a search bar (similar to the original airbnb site), that allows the user to filter airbnb's by borough.
+
+* A bonus implementation of authentication, which works with a dependency called 'passport' to protect user information and provide secure access for the user. 
+
+## Add a screenshot or video of the project once everything is working
+
+## Front-end Installation instruction
 1. **Clone the repo** 
     - > Git clone 
         - Clone Link -> https://github.com/rafaelirangel/bark-at-airbnb-frontend
 
 2. **Install dependencies**
     - > npm install 
-        - install axios
-             - @mui/icons-material @mui/material @emotion/styled @emotion/react   
-                - @icon-park/react 
+        - axios
+        - @mui/icons-material @mui/material @emotion/styled @emotion/react   
+        - @icon-park/react 
 
 4. **Start the server**
     - > Npx run start
@@ -21,7 +34,7 @@
 
 
 
-## Installation Back-end
+## Front-end Installation instruction
 1. **Clone the repo** 
     - > Git clone 
         - Clone Link -> https://github.com/Suchethao/Bark-at-airbnb-backend
@@ -29,12 +42,12 @@
 2. **Install dependencies**
     - > npm install 
         - express 
-            - mongoose 
-                - nodemon 
-                    - cors
-                        - passport 
-                            - passport-jwt
-                                - jwt-simple
+        - mongoose 
+        - nodemon 
+        - cors
+        - passport 
+        - passport-jwt
+        - jwt-simple
 
 3. **Seed the data**
     - > node db/seed.js 
@@ -42,7 +55,7 @@
 4. **Start the server**
     - > Navigate into the repo file
         -  nodemon app.js || 
-            -  node app.js
+        -  node app.js
 
 5. **Server Port**       
     - > Server running on port 3001     
@@ -58,5 +71,5 @@
 ![JAVASCRIPT badge](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![NODE JS badge](	https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![MONGODB badge](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)  
-Mongoose
+- Mongoose
 
