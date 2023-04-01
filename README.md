@@ -9,7 +9,7 @@
 
 2. **Install dependencies**
     - > npm install 
-        - install axios
+        - axios
              - @mui/icons-material @mui/material @emotion/styled @emotion/react   
                 - @icon-park/react 
 
