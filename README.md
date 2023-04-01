@@ -19,18 +19,18 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
 1. **Clone the repo** 
 ```
     -> Git clone 
-        - $ git clone https://github.com/rafaelirangel/bark-at-airbnb-frontend
+        $ git clone https://github.com/rafaelirangel/bark-at-airbnb-frontend
 ```
 2. **Install dependencies**
 ```
-    - $ npm install 
+    $ npm install 
         - axios
         - @mui/icons-material @mui/material @emotion/styled @emotion/react   
         - @icon-park/react 
 ```
 4. **Start the server**
 ```
-    -> Npx run start
+    $ npx run start
 ```
 5. **Open in browser**
 ```
@@ -42,7 +42,7 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
 1. **Clone the repo** 
 ```
     -> Git clone 
-        - $ git clone https://github.com/Suchethao/Bark-at-airbnb-backend
+        $ git clone https://github.com/Suchethao/Bark-at-airbnb-backend
 ```
 2. **Install dependencies**
 ```
@@ -57,13 +57,13 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
 ```
 3. **Seed the data**
 ```
-    - $ node db/seed.js 
+    $ node db/seed.js 
 ```
 4. **Start the server**
 ```
     -> Navigate into the repo file
-        -  nodemon app.js || 
-        -  node app.js
+        $ nodemon app.js || 
+        $ node app.js
 ```
 5. **Server Port**     
 ```  
