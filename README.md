@@ -17,15 +17,17 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
 
 ## Front-end Installation instruction
 1. **Clone the repo** 
+```
     - > Git clone 
-        - Clone Link -> https://github.com/rafaelirangel/bark-at-airbnb-frontend
-
+        - $ git clone https://github.com/rafaelirangel/bark-at-airbnb-frontend
+```
 2. **Install dependencies**
-    - > npm install 
+```
+    - $ npm install 
         - axios
         - @mui/icons-material @mui/material @emotion/styled @emotion/react   
         - @icon-park/react 
-
+```
 4. **Start the server**
     - > Npx run start
 
@@ -36,11 +38,13 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
 
 ## Front-end Installation instruction
 1. **Clone the repo** 
+```
     - > Git clone 
-        - Clone Link -> https://github.com/Suchethao/Bark-at-airbnb-backend
-
+        - $ git clone https://github.com/Suchethao/Bark-at-airbnb-backend
+```
 2. **Install dependencies**
-    - > npm install 
+```
+    -  $ npm install 
         - express 
         - mongoose 
         - nodemon 
@@ -48,18 +52,21 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
         - passport 
         - passport-jwt
         - jwt-simple
-
+```
 3. **Seed the data**
+```
     - > node db/seed.js 
-
+```
 4. **Start the server**
+```
     - > Navigate into the repo file
         -  nodemon app.js || 
         -  node app.js
-
-5. **Server Port**       
+```
+5. **Server Port**     
+```  
     - > Server running on port 3001     
-
+```
 
 ## Technology Used
 ![REACT badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
