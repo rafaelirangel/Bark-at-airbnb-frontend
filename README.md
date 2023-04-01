@@ -15,10 +15,10 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
 
 ## Add a screenshot or video of the project once everything is working
 
-## Front-end Installation instruction
+## Front-end Installation instructions
 1. **Clone the repo** 
 ```
-    - > Git clone 
+    -> Git clone 
         - $ git clone https://github.com/rafaelirangel/bark-at-airbnb-frontend
 ```
 2. **Install dependencies**
@@ -29,22 +29,24 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
         - @icon-park/react 
 ```
 4. **Start the server**
-    - > Npx run start
-
+```
+    -> Npx run start
+```
 5. **Open in browser**
-    - > Open [http://localhost:3000/airbnb](http://localhost:3000/airbnb) to view it in your browser.
+```
+    -> Open [http://localhost:3000/airbnb](http://localhost:3000/airbnb) to view it in your browser.
+```
 
 
-
-## Front-end Installation instruction
+## Front-end Installation instructions
 1. **Clone the repo** 
 ```
-    - > Git clone 
+    -> Git clone 
         - $ git clone https://github.com/Suchethao/Bark-at-airbnb-backend
 ```
 2. **Install dependencies**
 ```
-    -  $ npm install 
+    $ npm install 
         - express 
         - mongoose 
         - nodemon 
@@ -55,17 +57,17 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
 ```
 3. **Seed the data**
 ```
-    - > node db/seed.js 
+    - $ node db/seed.js 
 ```
 4. **Start the server**
 ```
-    - > Navigate into the repo file
+    -> Navigate into the repo file
         -  nodemon app.js || 
         -  node app.js
 ```
 5. **Server Port**     
 ```  
-    - > Server running on port 3001     
+    -> Server running on port 3001     
 ```
 
 ## Technology Used
