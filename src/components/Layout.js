@@ -14,7 +14,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 //Component contains header and footer
 const Layout = ({ listingsData, setSearchResult }) => {
-    console.log(listingsData)
 
     return (
         <div className="layout">

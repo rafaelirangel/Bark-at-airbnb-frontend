@@ -17,7 +17,6 @@ function App() {
       try {
         const result = await axios.get('http://localhost:3001/airbnb/'
         ); 
-        console.log(result)
         setListings(result.data);
         setSearchResult(result.data)
       } catch (error) {

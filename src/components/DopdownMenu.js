@@ -8,8 +8,8 @@ import './DropdownMenu.css'
 export default function DropdownMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
+    const handleClick = (e) => {
+        setAnchorEl(e.currentTarget);
     };
     const handleClose = () => {
         setAnchorEl(null);
@@ -40,7 +40,6 @@ export default function DropdownMenu() {
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
                 <MenuItem onClick={handleClose}>Logout</MenuItem>
-                <p>Hello</p>
             </Menu>
         </div>
     );
