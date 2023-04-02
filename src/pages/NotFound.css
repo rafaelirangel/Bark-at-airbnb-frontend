@@ -5,7 +5,7 @@ h2 {
 }
 
 .notFound {
-    background-image: url(/Users/rafaelirangel/Library/sandbox/portfolio/bark-at-airbnb/src/img/frame-with-dogs-vector-white-background_53876-127700.avif);
+    /* background-image: url(/Users/rafaelirangel/Library/sandbox/portfolio/bark-at-airbnb/src/img/frame-with-dogs-vector-white-background_53876-127700.avif); */
     background-image: repeating-linear-gradient();
 }
 

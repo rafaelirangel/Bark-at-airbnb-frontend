@@ -5,7 +5,6 @@ import { Avatar } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import './DropdownMenu.css'
 
-
 export default function DropdownMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -38,9 +37,10 @@ export default function DropdownMenu() {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Register</MenuItem>
+                <MenuItem onClick={handleClose}>Login</MenuItem>
                 <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <p>Hello</p>
             </Menu>
         </div>
     );

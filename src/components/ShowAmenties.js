@@ -1,5 +1,7 @@
 import React from "react";
 import './ShowAmenties.css'
+
+//Icons used on the page
 import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService';
@@ -12,23 +14,17 @@ import MicrowaveIcon from '@mui/icons-material/Microwave';
 import KitchenIcon from '@mui/icons-material/Kitchen';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import { BottleTwo, WaterRateTwo } from '@icon-park/react';
-import { SoapBubble } from '@icon-park/react';
-import { HairDryer } from "@icon-park/react";
-import { Comb } from "@icon-park/react";
+import { BottleTwo, WaterRateTwo ,SoapBubble, HairDryer, Comb, AirConditioning, Alarm, Oven } from '@icon-park/react';
 import RouterIcon from '@mui/icons-material/Router';
-import { AirConditioning } from "@icon-park/react";
-import { Alarm } from "@icon-park/react";
-import { Oven } from "@icon-park/react";
 import PetsIcon from '@mui/icons-material/Pets';
 import KeyIcon from '@mui/icons-material/Key';
-import Layout from "../components/Layout";
 
-//Modal Content
+
+//Amenties Modal Content
 const ShowAmenties = ({ closeModal }) => {
     return (
         <div className="modalBackground" onClick={() => closeModal(false)} >
-            
+
             <div className="modalContainer">
                 <div className="closeBtn">
                     < button onClick={() => closeModal(false)}>X</button >
