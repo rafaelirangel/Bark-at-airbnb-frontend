@@ -33,7 +33,8 @@ function App() {
   })
 
   async function handleRegister(userInfo) {
-    if(user.password === user.retypePassword){
+    console.log(userInfo);
+    console.log(user);
       await axios.post("http://localhost:3001/users/register", {
         email: userInfo.email,
         password: userInfo.password,
@@ -47,10 +48,8 @@ function App() {
         console.log("registered");
       })
       .catch((error) => console.log(error));
-    } else {
-      console.log("user not found");
     }
-  }
+  
 
   async function handleLogIn(userInfo) {
     console.log(userInfo)

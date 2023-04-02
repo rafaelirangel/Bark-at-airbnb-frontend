@@ -12,7 +12,7 @@ import { Avatar } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 
 //DropDown Menu with LogIn, LogOut and Register options
- const DropdownMenu = ({ handleLogIn })  => {
+ const DropdownMenu = ({ handleLogIn, handleRegister, handleLogOut})  => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [openLoginModal, setOpenLoginModal] = useState(false)
     const [openLogOutModal, setOpenLogOutModal] = useState(false)
@@ -57,12 +57,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 
                 <div className='showRegister'>
                     <MenuItem onClick={() => { setOpenRegisterModal(true) }} >Register</MenuItem>
-                    {openRegisterModal && <Register closeRegisterModal={setOpenRegisterModal} />}
+                    {openRegisterModal && <Register handleRegister={handleRegister} closeRegisterModal={setOpenRegisterModal} />}
                 </div>     
                 
                 <div className='showLogout'>
                     <MenuItem onClick={() => { setOpenLogOutModal(true) }} >LogOut</MenuItem>
-                    {openLogOutModal && <LogOut closeLogOutModal={setOpenLogOutModal} />}
+                    {openLogOutModal && <LogOut handleLogOut={handleLogOut} closeLogOutModal={setOpenLogOutModal} />}
                 </div> 
              
             </Menu>
