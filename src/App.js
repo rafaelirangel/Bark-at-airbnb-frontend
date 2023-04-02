@@ -1,105 +1,8 @@
-// import './App.css';
-// import {Home, NotFound, Layout, ShowMore, AirbnbInfo, ShowAmenties } from './pages';
-// import { Routes, Route, Navigate } from 'react-router-dom';
-// import { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import SearchBar from './components/SearchBar';
-
-// function App() {
-
-//   const [listingsData, setListings] = useState([]);
-//   const [error, setError] = useState(null);
-//   const [searchResult, setSearchResult] = useState([])
-
-//   // Fetching data from the backend endpoint 
-//   useEffect(() => {
-//     const fetchListings = async () => {
-//       try {
-//         const result = await axios.get('http://localhost:3001/airbnb/'
-//         ); 
-//         console.log(result)
-//         setListings(result.data);
-//         setSearchResult(result.data)
-//       } catch (error) {
-//         setError(error)
-//       }
-//     };
-//     fetchListings()
-//   }, []);
-
-//   if (error) {
-//     return <div>Oops! There was an error: {error.message}</div>
-//   }
-//   const [user, setUser] = useState({
-//     email: '',
-//     password: '',
-//     isLoggedIn: false  
-//   })
-//   async function handleRegister(e) {
-//     e.preventDefault()
-//     if(user.password === user.retypePassword){
-//       await axios.post("http://localhost:3001/users/register", {
-//         email: user.email,
-//         password: user.password
-//       })
-//       .then( res => {
-//         localStorage.token = res.data.token
-//         setUser({ isLoggedIn: true })
-//       })
-//       .catch(error => console.log(error))
-//     } else {
-//       console.log("user not found")
-//     }
-//   }
-//   async function handleLogIn(e) {
-//     e.preventDefault()
-//     axios.post('http://localhost:3001/users/login', {
-//       email: user.email,
-//       password: user.password
-//     })
-//     .then(response => {
-//       localStorage.token = response.data.token
-//       this.setState({ isLoggedIn: true })
-//     })
-//     .catch(err => console.log(err))
-//   }
-//   async function handleLogOut() {
-//     this.setState({
-//       email: '',
-//       password: '',
-//       isLoggedIn: false
-//     })
-//     localStorage.clear()
-//   }
-
-//   //ROUTES
-//   return (
-//     <div className='app'>
-//       <Routes>
-//         <Route path="/" element={<Layout listingsData={listingsData} setSearchResult={setSearchResult}/>}>
-//           <Route path='*' element={<NotFound />} />
-//           <Route path='/showMore' element={<ShowMore />} />
-//           <Route path='/showAmenties' element={<ShowAmenties />} />
-//           <Route path='/airbnb/:id' element={<AirbnbInfo />} />
-//           <Route index path='/airbnb' element={<Home listingsData={listingsData} searchResult={searchResult}/>} />
-//           <Route path="/" element={<Navigate to="/airbnb" />} />
-//         </Route>        
-//       </Routes>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import './App.css';
 import {Home, NotFound, Layout, ShowMore, AirbnbInfo, ShowAmenties } from './pages';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import LogIn from "./components/LogIn/LogIn.js";
-import LogOut from "./components/LogOut/LogOut.js";
-import Register from "./components/Register/Register.js";
 import axios from 'axios';
-import SearchBar from './components/SearchBar';
 
 function App() {
 
@@ -113,7 +16,6 @@ function App() {
       try {
         const result = await axios.get('http://localhost:3001/airbnb/'
         ); 
-        console.log(result)
         setListings(result.data);
         setSearchResult(result.data)
       } catch (error) {
@@ -122,11 +24,14 @@ function App() {
     };
     fetchListings()
   }, []);
+
+
   const [user, setUser] = useState({
         email: '',
         password: '',
         isLoggedIn: false
   })
+
   async function handleRegister(userInfo) {
     if(user.password === user.retypePassword){
       await axios.post("http://localhost:3001/users/register", {

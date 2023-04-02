@@ -1,19 +1,29 @@
-import React, { Component } from 'react'
-
 import './LogOut.css'
+import React from "react";
 
-class LogOut extends Component {
-  render () {
-    return (
-      <div>
-        <h2>Log Out</h2>
+const LogOut = ({ handleLogOut, closeLogOutModal }) => {
+  return (
+    <div className="modalBackground">
+      <div className="modalContainer">
+        <div className="closeBtn">
+          <button onClick={() => closeLogOutModal(false)}>X</button >
+        </div>
 
-        <form>
-          <input value='Log Out' type='submit' onClick={this.props.handleLogOut} />
-        </form>
+        <div className='login'>
+          <h2>Log Out</h2>
+
+          <form>
+            <input
+              className='submitBtn'
+              value="Log Out"
+              type="submit"
+              onClick={handleLogOut}
+            />
+          </form>
+        </div>
       </div>
-    )
-  }
+    </div>
+  );
 }
 
-export default LogOut
+export default LogOut;
