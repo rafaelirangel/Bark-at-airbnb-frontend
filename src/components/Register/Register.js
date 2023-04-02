@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 
 import './Register.css'
 
-export default function Register ({ handleRegister }) {
+const Register = ({ handleRegister, closeRegisterModal }) => {
+
   const [userInfo, setUserInfo] = useState({
     email: '',
     password: ''
@@ -19,24 +20,34 @@ export default function Register ({ handleRegister }) {
     e.preventDefault()
     handleRegister(userInfo)
   }
+
   return (
-    <div>
-      <h2>Register</h2>
-
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor='email'>Email</label>
-          <input type='text' name='email' onChange={handleInput} value={userInfo.email} />
+    <div className="modalBackground">
+      <div className="modalContainer">
+        
+        <div className="closeBtn">
+          <button onClick={() => closeRegisterModal(false)}>X</button >
         </div>
 
-        <div>
-          <label htmlFor='password'>Password</label>
-          <input type='password' name='password' onChange={handleInput} value={userInfo.password} />
+        <div className='login'>
+          <h2>Register</h2>
+
+          <form onSubmit={handleSubmit}>
+            <div className='email'>
+              <label className='emaiLabel' htmlFor='email'>Email</label>
+              <input className='emailInput' type='text' name='email' onChange={handleInput} value={userInfo.email} />
+            </div>
+
+            <div className='password'>
+              <label className='passwordLabel' htmlFor='password'>Password</label>
+              <input className='passwordInput' type='password' name='password' onChange={handleInput} value={userInfo.password} />
+            </div>
+            <input className='submitBtn' value='Submit' type='submit' />
+          </form>
         </div>
-        <input value='Submit' type='submit'/>
-      </form>
+      </div>
     </div>
   )
 }
 
-
+export default Register

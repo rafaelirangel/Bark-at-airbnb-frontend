@@ -1,38 +1,57 @@
 import React, { useState } from 'react'
-
+import DropdownMenu from '../DopdownMenu'
 import './LogIn.css'
 
-export default function LogIn ({handleLogIn}) {
+
+
+const LogIn = ({ handleLogIn, closeLoginModal }) => {
+
   const [userInfo, setUserInfo] = useState({
     email: '',
     password: ''
-})
-const handleInput = (e) => {
-  setUserInfo ({
-    ...userInfo,
-    [e.target.name]: e.target.value
   })
-}
-const handleSubmit = (e) => {
-  e.preventDefault()
-  handleLogIn(userInfo)
-}
-  return (
-    <div>
-      <h2>Log In</h2>
 
-      <form onSubmit = {handleSubmit}>
-        <div>
-          <label htmlFor='email'>Email</label>
-          <input type='text' name='email' onChange={handleInput} value={userInfo.email} />
+  const handleInput = (e) => {
+    setUserInfo({
+      ...userInfo,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    handleLogIn(userInfo)
+  }
+
+  return (
+    <div className="modalBackground">
+      <div className="modalContainer">
+
+        <div className="closeBtn">
+          <button onClick={() => closeLoginModal(false)}>X</button >
         </div>
-        <div>
-          <label htmlFor='password'>Password</label>
-          <input type='text' name='password' onChange={handleInput} value={userInfo.password} />
+
+        <div className='login'>
+          <h2>Log In</h2>
+
+          <form onSubmit={handleSubmit} className="form-container">
+            <div className='email'>
+              <label className='emaiLabel' htmlFor='email'>Email</label>
+              <input className='emailInput' type='text' name='email' onChange={handleInput} value={userInfo.email} />
+            </div>
+
+            <div className='password'>
+              <label className='passwordLabel' htmlFor='password'>Password</label>
+              <input className='passwordInput' type='text' name='password' onChange={handleInput} value={userInfo.password} />
+            </div>
+
+            <input className='submitBtn' value='Submit' type='submit' />
+          </form>
         </div>
-        <input value='Submit' type='submit' />
-      </form>
+      </div>
     </div>
-  ) 
+  )
 }
+
+export default LogIn
 
