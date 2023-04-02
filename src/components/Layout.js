@@ -4,6 +4,10 @@ import './Layout.css'
 import SearchBar from "./SearchBar";
 import { useState } from "react";
 import { useParams, useLocation } from 'react-router-dom';
+import LogIn from "./LogIn/LogIn";
+import LogOut from "./LogOut/LogOut";
+import Register from "./Register/Register";
+
 
 //Icons used on the page
 import LanguageIcon from '@mui/icons-material/Language';
@@ -13,7 +17,7 @@ import IosShareIcon from '@mui/icons-material/IosShare';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 //Component contains header and footer
-const Layout = ({ listingsData, setSearchResult }) => {
+const Layout = ({ listingsData, setSearchResult, handleLogIn}) => {
     console.log(listingsData)
 
     return (
@@ -31,6 +35,9 @@ const Layout = ({ listingsData, setSearchResult }) => {
 
                 <div className="headerRight">
                     <DropdownMenu />
+                    <LogIn handleLogIn={handleLogIn}/>
+                    <LogOut/>
+                    <Register/>
                 </div>
             </nav>
 

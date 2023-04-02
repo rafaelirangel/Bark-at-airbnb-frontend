@@ -37,8 +37,8 @@ export default function DropdownMenu() {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Register</MenuItem>
+                <MenuItem onClick={handleClose}>Login</MenuItem>
                 <MenuItem onClick={handleClose}>Logout</MenuItem>
                 <p>Hello</p>
             </Menu>
