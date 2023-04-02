@@ -38,7 +38,7 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
 
 
 
-## Front-end Installation instructions
+## Back-end Installation instructions
 1. **Clone the repo** 
 ```
     -> Git clone 
