@@ -24,7 +24,6 @@ const Home = ({ listingsData, searchResult }) => {
             </article>
         </div>
 
-
     return (
         <div className="home">
 

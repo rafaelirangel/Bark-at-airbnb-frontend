@@ -5,9 +5,9 @@
     border: 2px solid #FF5A5F;
 }
 
-/* .noContent{
-    padding: 0 50%;
-} */
+.noContent{
+   padding: 0 350px;
+}
 
 .cards h3 {
     display: grid;

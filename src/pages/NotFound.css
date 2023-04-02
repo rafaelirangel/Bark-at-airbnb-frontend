@@ -5,15 +5,15 @@ h2 {
 }
 
 .notFound {
-    /* background-image: url(/Users/rafaelirangel/Library/sandbox/portfolio/bark-at-airbnb/src/img/frame-with-dogs-vector-white-background_53876-127700.avif); */
+    background-image: url(https://img.freepik.com/free-vector/frame-with-dogs-vector-white-background_53876-127700.jpg?w=1800&t=st=1680304258~exp=1680304858~hmac=55e1d64a396bd5d050b598704f7a955cb4d710438b87d559cec10cbec415a2e2);
     background-image: repeating-linear-gradient();
 }
 
 .pageNotFound {
-    font-size: 150px;
+    margin-top: 30px;
+    font-size: 120px;
     font-weight: 300;
 }
-
 
 .notFoundContent {
     display: flex;
