@@ -1,19 +1,31 @@
 import * as React from 'react';
+import './DropdownMenu.css'
+import { useState } from "react";
+import LogIn from './LogIn/LogIn';
+import LogOut from './LogOut/LogOut';
+import Register from './Register/Register';
+
+//Icons used on the page 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { Avatar } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import './DropdownMenu.css'
 
-export default function DropdownMenu() {
+//DropDown Menu with LogIn, LogOut and Register options
+ const DropdownMenu = ({ handleLogIn, handleRegister, handleLogOut})  => {
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const [openLoginModal, setOpenLoginModal] = useState(false)
+    const [openLogOutModal, setOpenLogOutModal] = useState(false)
+    const [openRegisterModal, setOpenRegisterModal] = useState(false)
+
     const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
+    const handleClick = (e) => {
+        setAnchorEl(e.currentTarget);
     };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+
+     const handleClose = () => {
+         setAnchorEl(null);
+     };
 
     return (
         <div>
@@ -37,11 +49,25 @@ export default function DropdownMenu() {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                <MenuItem onClick={handleClose}>Register</MenuItem>
-                <MenuItem onClick={handleClose}>Login</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
-                <p>Hello</p>
+
+            <div className='showLogin'>
+                    <MenuItem onClick={() => { setOpenLoginModal(true) } } >LogIn</MenuItem>
+                    {openLoginModal && <LogIn handleLogIn={handleLogIn}  closeLoginModal={setOpenLoginModal} />}
+            </div>     
+
+                <div className='showRegister'>
+                    <MenuItem onClick={() => { setOpenRegisterModal(true) }} >Register</MenuItem>
+                    {openRegisterModal && <Register handleRegister={handleRegister} closeRegisterModal={setOpenRegisterModal} />}
+                </div>     
+                
+                <div className='showLogout'>
+                    <MenuItem onClick={() => { setOpenLogOutModal(true) }} >LogOut</MenuItem>
+                    {openLogOutModal && <LogOut handleLogOut={handleLogOut} closeLogOutModal={setOpenLogOutModal} />}
+                </div> 
+             
             </Menu>
         </div>
     );
 }
+
+export default DropdownMenu
