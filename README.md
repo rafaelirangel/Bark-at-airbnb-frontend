@@ -13,8 +13,6 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
 
 * A bonus implementation of authentication, which works with a dependency called 'passport' to protect user information and provide secure access for the user. 
 
-## Add a screenshot or video of the project once everything is working
-
 ## Front-end Installation instructions
 1. **Clone the repo** 
 ```
@@ -82,3 +80,6 @@ Highlight: Developing a search bar (similar to the original airbnb site), that a
 ![MONGODB badge](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)  
 - Mongoose
 
+## Bark Airbnb
+
+https://user-images.githubusercontent.com/113485644/229406634-19fb0636-9a60-4619-b63d-fdc23e05376c.mp4
